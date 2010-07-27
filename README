@@ -17,14 +17,15 @@ scgi server that you find in the node-sgi directory).
 The example scgi server sits on the port 4000 and does nothing more that 
 saying "hello" (as usual). Running it is just a matter of executing 
 "python ./node-sgi.py -F" (-F keeps the server on foreground, better for 
-testing purposes).
+testing purposes). The server has been hacked over the existing Quixote scgi
+server example on the python-scgi Debian distribution.
 
 The scgi module roughly writes and inteprets HTTP headers (on the request 
 and the response), so be aware of the (quite standard) way it expect them on the
 response if you need to modify them. Again, the example scgi server should 
 be really enough.
 
-The overall codebase, at the moment, is more or less of proof of concept.
+Keep in mind that the overall codebase, at the moment, is more or less of proof of concept.
 
 Performances are quite good (about 300 r/s) using a virtualbox Ubuntu linux setup,
 and apache's ab benchmark via OSX.
