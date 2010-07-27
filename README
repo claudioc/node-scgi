@@ -1,6 +1,6 @@
 
-Node SGI client interface
-=========================
+Node SCGI client interface
+==========================
 
 This module gives you a (raw) interface for talking to SCGI "servers".
 
