@@ -30,7 +30,7 @@ Keep in mind that the overall codebase, at the moment, is more or less of proof 
 Performances are quite good (about 300 r/s) using a virtualbox Ubuntu linux setup,
 and apache's ab benchmark via OSX.
 
-The nodejs server shipped with this module will serves SCGI requests when
+The nodejs server shipped with this module will serve SCGI requests when
 the URL contains the /scgi/ pattern. Something like wget http://localhost:8000/scgi/foobar
 
 
