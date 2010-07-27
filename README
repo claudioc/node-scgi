@@ -4,7 +4,7 @@ Node SCGI client interface
 
 This module gives you a (raw) interface for talking to SCGI "servers".
 
-This could be useful, for example, on a mixed environment where Node.js act
+This could be useful, for example, on a mixed environment where Node.js acts
 as the frontend serving some kind of requests while something "behind"
 could serve some other kind of requests (ie: Python scripts)
 
