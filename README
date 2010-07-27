@@ -1,0 +1,35 @@
+
+Node SGI client interface
+=========================
+
+This module gives you a (raw) interface for talking to SCGI "servers".
+
+This could be useful, for example, on a mixed environment where Node.js act
+as the frontend serving some kind of requests while something "behind"
+could serve some other kind of requests (ie: Python scripts)
+
+At this stage the module is so simple that is not even documented: you can
+learn what it does simply reading the one page long code source :)
+
+If you want to try it, just install python-scgi (this is needed by the example
+scgi server that you find in the node-sgi directory).
+
+The example scgi server sits on the port 4000 and does nothing more that 
+saying "hello" (as usual). Running it is just a matter of executing 
+"python ./node-sgi.py -F" (-F keeps the server on foreground, better for 
+testing purposes).
+
+The scgi module roughly writes and inteprets HTTP headers (on the request 
+and the response), so be aware of the (quite standard) way it expect them on the
+response if you need to modify them. Again, the example scgi server should 
+be really enough.
+
+The overall codebase, at the moment, is more or less of proof of concept.
+
+Performances are quite good (about 300 r/s) using a virtualbox Ubuntu linux setup,
+and apache's ab benchmark via OSX.
+
+The nodejs server shipped with this module will serves SCGI requests when
+the URL contains the /scgi/ pattern. Something like wget http://localhost:8000/scgi/foobar
+
+
